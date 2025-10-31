@@ -1,0 +1,60 @@
+[SERVER] 2025-10-26 15:05:03,638 - INFO - Server starded, listening on 32979
+[CLIENT] 2025-10-26 15:05:36,228 - DEBUG -attempt reconnection (True, None, 0)
+[CLIENT] 2025-10-26 15:05:36,228 - DEBUG -attempting connection to host 127.0.0.1, port 61613
+[CLIENT] 2025-10-26 15:05:36,229 - INFO -established connection to host 127.0.0.1, port 61613
+[CLIENT] 2025-10-26 15:05:36,230 - DEBUG -starting receiver loop (<Thread(Thread-1 (__receiver_loop), started daemon 140558948366016)>)
+[CLIENT] 2025-10-26 15:05:36,231 - DEBUG -created thread <Thread(Thread-1 (__receiver_loop), started daemon 140558948366016)> using func <function default_create_thread at 0x7fd66ecc65c0>
+[CLIENT] 2025-10-26 15:05:36,232 - DEBUG -sending frame: [b'STOMP', b'\n', b'accept-version:1.1\n', b'\n', b'\x00']
+[CLIENT] 2025-10-26 15:05:36,236 - DEBUG -received frame: 'CONNECTED', headers={'server': 'ActiveMQ/5.16.6', 'heart-beat': '0,0', 'session': 'ID:studente-37013-1761507983031-3:3', 'version': '1.1'}, body=''
+[CLIENT] 2025-10-26 15:05:36,236 - DEBUG -heartbeats calculated (0, 0)
+[CLIENT] 2025-10-26 15:05:36,236 - DEBUG -sending frame: [b'SUBSCRIBE', b'\n', b'ack:auto\n', b'destination:/queue/response\n', b'id:1\n', b'\n', b'\x00']
+[CLIENT] 2025-10-26 15:05:36,237 - DEBUG -sending frame: [b'SEND', b'\n', b'destination:/queue/request\n', b'reply-to:/queue/response\n', b'\n', b'deposita-63', b'\x00']
+[CLIENT] 2025-10-26 15:05:36,237 - DEBUG -Request: deposita-63
+[CLIENT] 2025-10-26 15:05:36,238 - DEBUG -sending frame: [b'SEND', b'\n', b'destination:/queue/request\n', b'reply-to:/queue/response\n', b'\n', b'deposita-95', b'\x00']
+[CLIENT] 2025-10-26 15:05:36,239 - DEBUG -Request: deposita-95
+[CLIENT] 2025-10-26 15:05:36,239 - DEBUG -sending frame: [b'SEND', b'\n', b'destination:/queue/request\n', b'reply-to:/queue/response\n', b'\n', b'deposita-35', b'\x00']
+[CLIENT] 2025-10-26 15:05:36,239 - DEBUG -Request: deposita-35
+[CLIENT] 2025-10-26 15:05:36,240 - DEBUG -sending frame: [b'SEND', b'\n', b'destination:/queue/request\n', b'reply-to:/queue/response\n', b'\n', b'preleva', b'\x00']
+[CLIENT] 2025-10-26 15:05:36,240 - DEBUG -Request: preleva
+[CLIENT] 2025-10-26 15:05:36,240 - DEBUG -sending frame: [b'SEND', b'\n', b'destination:/queue/request\n', b'reply-to:/queue/response\n', b'\n', b'preleva', b'\x00']
+[CLIENT] 2025-10-26 15:05:36,240 - DEBUG -Request: preleva
+[CLIENT] 2025-10-26 15:05:36,241 - DEBUG -sending frame: [b'SEND', b'\n', b'destination:/queue/request\n', b'reply-to:/queue/response\n', b'\n', b'preleva', b'\x00']
+[CLIENT] 2025-10-26 15:05:36,242 - DEBUG -Request: preleva
+[CLIENT] 2025-10-26 15:05:36,242 - DEBUG -sending frame: [b'SEND', b'\n', b'destination:/queue/request\n', b'reply-to:/queue/response\n', b'\n', b'preleva', b'\x00']
+[CLIENT] 2025-10-26 15:05:36,242 - DEBUG -Request: preleva
+[CLIENT] 2025-10-26 15:05:36,242 - DEBUG -sending frame: [b'SEND', b'\n', b'destination:/queue/request\n', b'reply-to:/queue/response\n', b'\n', b'preleva', b'\x00']
+[CLIENT] 2025-10-26 15:05:36,242 - DEBUG -Request: preleva
+[CLIENT] 2025-10-26 15:05:36,243 - DEBUG -sending frame: [b'SEND', b'\n', b'destination:/queue/request\n', b'reply-to:/queue/response\n', b'\n', b'deposita-14', b'\x00']
+[CLIENT] 2025-10-26 15:05:36,243 - DEBUG -Request: deposita-14
+[CLIENT] 2025-10-26 15:05:36,243 - DEBUG -sending frame: [b'SEND', b'\n', b'destination:/queue/request\n', b'reply-to:/queue/response\n', b'\n', b'deposita-70', b'\x00']
+[CLIENT] 2025-10-26 15:05:36,243 - DEBUG -Request: deposita-70
+[SERVER] 2025-10-26 15:05:36,684 - DEBUG - Valore depositato: 70
+[SERVER] 2025-10-26 15:05:36,685 - DEBUG - Valore prelevato: 70
+[SERVER] 2025-10-26 15:05:36,686 - DEBUG - Valore depositato: 95
+[SERVER] 2025-10-26 15:05:36,688 - DEBUG - Valore depositato: 63
+[SERVER] 2025-10-26 15:05:36,688 - DEBUG - Valore prelevato: 95
+[SERVER] 2025-10-26 15:05:36,688 - DEBUG - Valore prelevato: 63
+[SERVER] 2025-10-26 15:05:36,689 - DEBUG - Valore depositato: 35
+[SERVER] 2025-10-26 15:05:36,690 - DEBUG - Valore prelevato: 35
+[SERVER] 2025-10-26 15:05:36,690 - DEBUG - Valore depositato: 14
+[SERVER] 2025-10-26 15:05:36,693 - DEBUG - Valore prelevato: 14
+[CLIENT] 2025-10-26 15:05:36,716 - DEBUG -received frame: 'MESSAGE', headers={'expires': '0', 'destination': '/queue/response', 'subscription': '1', 'priority': '4', 'message-id': 'ID:studente-36103-1761509127677-1:1:5:1:1', 'persistent': 'true', 'timestamp': '1761509136709'}, body='deposited'
+[CLIENT] 2025-10-26 15:05:36,716 - DEBUG -Received response: "deposited" 
+[CLIENT] 2025-10-26 15:05:36,764 - DEBUG -received frame: 'MESSAGE', headers={'expires': '0', 'destination': '/queue/response', 'subscription': '1', 'priority': '4', 'message-id': 'ID:studente-36103-1761509127677-1:1:3:1:1', 'persistent': 'true', 'timestamp': '1761509136709'}, body='70'
+[CLIENT] 2025-10-26 15:05:36,764 - DEBUG -Received response: "70" 
+[CLIENT] 2025-10-26 15:05:36,764 - DEBUG -received frame: 'MESSAGE', headers={'expires': '0', 'destination': '/queue/response', 'subscription': '1', 'priority': '4', 'message-id': 'ID:studente-36103-1761509127677-1:1:2:1:1', 'persistent': 'true', 'timestamp': '1761509136709'}, body='deposited'
+[CLIENT] 2025-10-26 15:05:36,764 - DEBUG -Received response: "deposited" 
+[CLIENT] 2025-10-26 15:05:36,764 - DEBUG -received frame: 'MESSAGE', headers={'expires': '0', 'destination': '/queue/response', 'subscription': '1', 'priority': '4', 'message-id': 'ID:studente-36103-1761509127677-1:1:4:1:1', 'persistent': 'true', 'timestamp': '1761509136711'}, body='deposited'
+[CLIENT] 2025-10-26 15:05:36,764 - DEBUG -Received response: "deposited" 
+[CLIENT] 2025-10-26 15:05:36,764 - DEBUG -received frame: 'MESSAGE', headers={'expires': '0', 'destination': '/queue/response', 'subscription': '1', 'priority': '4', 'message-id': 'ID:studente-36103-1761509127677-1:1:7:1:1', 'persistent': 'true', 'timestamp': '1761509136719'}, body='35'
+[CLIENT] 2025-10-26 15:05:36,764 - DEBUG -Received response: "35" 
+[CLIENT] 2025-10-26 15:05:36,764 - DEBUG -received frame: 'MESSAGE', headers={'expires': '0', 'destination': '/queue/response', 'subscription': '1', 'priority': '4', 'message-id': 'ID:studente-36103-1761509127677-1:1:9:1:1', 'persistent': 'true', 'timestamp': '1761509136719'}, body='63'
+[CLIENT] 2025-10-26 15:05:36,765 - DEBUG -Received response: "63" 
+[CLIENT] 2025-10-26 15:05:36,765 - DEBUG -received frame: 'MESSAGE', headers={'expires': '0', 'destination': '/queue/response', 'subscription': '1', 'priority': '4', 'message-id': 'ID:studente-36103-1761509127677-1:1:6:1:1', 'persistent': 'true', 'timestamp': '1761509136720'}, body='95'
+[CLIENT] 2025-10-26 15:05:36,765 - DEBUG -Received response: "95" 
+[CLIENT] 2025-10-26 15:05:36,765 - DEBUG -received frame: 'MESSAGE', headers={'expires': '0', 'destination': '/queue/response', 'subscription': '1', 'priority': '4', 'message-id': 'ID:studente-36103-1761509127677-1:1:11:1:1', 'persistent': 'true', 'timestamp': '1761509136720'}, body='14'
+[CLIENT] 2025-10-26 15:05:36,765 - DEBUG -Received response: "14" 
+[CLIENT] 2025-10-26 15:05:36,765 - DEBUG -received frame: 'MESSAGE', headers={'expires': '0', 'destination': '/queue/response', 'subscription': '1', 'priority': '4', 'message-id': 'ID:studente-36103-1761509127677-1:1:8:1:1', 'persistent': 'true', 'timestamp': '1761509136722'}, body='deposited'
+[CLIENT] 2025-10-26 15:05:36,765 - DEBUG -Received response: "deposited" 
+[CLIENT] 2025-10-26 15:05:36,765 - DEBUG -received frame: 'MESSAGE', headers={'expires': '0', 'destination': '/queue/response', 'subscription': '1', 'priority': '4', 'message-id': 'ID:studente-36103-1761509127677-1:1:10:1:1', 'persistent': 'true', 'timestamp': '1761509136723'}, body='deposited'
+[CLIENT] 2025-10-26 15:05:36,765 - DEBUG -Received response: "deposited" 

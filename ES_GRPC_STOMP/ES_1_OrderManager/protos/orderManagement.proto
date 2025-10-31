@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package order_managemet;
+
+
+service OrderManager{
+
+    rpc addOrder(Order) returns (StringMessage);
+    rpc getOrder(StringMessage) returns (Order);
+    rpc searchOrders(StringMessage) returns (stream Order);
+    rpc processOrders(stream Order) returns (stream CombinedShipment);
+
+}
+
+message Order{
+
+    string id = 1;
+    repeated string items = 2; 
+    string description = 3;
+    float price = 4;
+    string destination = 5;
+
+}
+
+message StringMessage{
+
+    string value = 1;
+
+}
+
+message CombinedShipment{
+
+    string shipment_id = 1;
+    repeated Order orders = 2;
+    string status = 3; 
+}

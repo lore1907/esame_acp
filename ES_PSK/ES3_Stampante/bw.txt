@@ -1,0 +1,10 @@
+Stampa del file: /user/file_40.doc 	 bw
+Stampa del file: /user/file_79.doc 	 bw
+Stampa del file: /user/file_13.doc 	 bw
+Stampa del file: /user/file_90.txt 	 bw
+Stampa del file: /user/file_19.txt 	 bw
+Stampa del file: /user/file_27.doc 	 bw
+Stampa del file: /user/file_43.txt 	 bw
+Stampa del file: /user/file_56.doc 	 bw
+Stampa del file: /user/file_16.txt 	 bw
+Stampa del file: /user/file_68.txt 	 bw

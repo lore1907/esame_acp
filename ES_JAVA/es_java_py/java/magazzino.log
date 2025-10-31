@@ -1,0 +1,280 @@
+Oct 26, 2025 3:05:27 PM io.grpc.ManagedChannelRegistry getHardCodedClasses
+FINE: Unable to find OkHttpChannelProvider
+java.lang.ClassNotFoundException: io.grpc.okhttp.OkHttpChannelProvider
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at io.grpc.ManagedChannelRegistry.getHardCodedClasses(ManagedChannelRegistry.java:137)
+	at io.grpc.ManagedChannelRegistry.getDefaultRegistry(ManagedChannelRegistry.java:103)
+	at io.grpc.Grpc.newChannelBuilder(Grpc.java:101)
+	at dispatcher.Dispatcher.main(Dispatcher.java:62)
+
+Oct 26, 2025 3:05:27 PM io.grpc.ManagedChannelRegistry getHardCodedClasses
+FINE: Unable to find NettyChannelProvider
+java.lang.ClassNotFoundException: io.grpc.netty.NettyChannelProvider
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at io.grpc.ManagedChannelRegistry.getHardCodedClasses(ManagedChannelRegistry.java:142)
+	at io.grpc.ManagedChannelRegistry.getDefaultRegistry(ManagedChannelRegistry.java:103)
+	at io.grpc.Grpc.newChannelBuilder(Grpc.java:101)
+	at dispatcher.Dispatcher.main(Dispatcher.java:62)
+
+Oct 26, 2025 3:05:27 PM io.grpc.ManagedChannelRegistry getHardCodedClasses
+FINE: Unable to find UdsNettyChannelProvider
+java.lang.ClassNotFoundException: io.grpc.netty.UdsNettyChannelProvider
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at io.grpc.ManagedChannelRegistry.getHardCodedClasses(ManagedChannelRegistry.java:147)
+	at io.grpc.ManagedChannelRegistry.getDefaultRegistry(ManagedChannelRegistry.java:103)
+	at io.grpc.Grpc.newChannelBuilder(Grpc.java:101)
+	at dispatcher.Dispatcher.main(Dispatcher.java:62)
+
+Oct 26, 2025 3:05:27 PM io.grpc.ManagedChannelRegistry getDefaultRegistry
+FINE: Service loader found io.grpc.netty.shaded.io.grpc.netty.NettyChannelProvider@44f75083
+Oct 26, 2025 3:05:27 PM io.grpc.ManagedChannelRegistry getDefaultRegistry
+FINE: Service loader found io.grpc.netty.shaded.io.grpc.netty.UdsNettyChannelProvider@2698dc7
+Oct 26, 2025 3:05:27 PM io.grpc.NameResolverRegistry getDefaultRegistry
+FINE: Service loader found io.grpc.internal.DnsNameResolverProvider@70beb599
+Oct 26, 2025 3:05:27 PM io.grpc.NameResolverRegistry getDefaultRegistry
+FINE: Service loader found io.grpc.netty.shaded.io.grpc.netty.UdsNameResolverProvider@4e41089d
+Oct 26, 2025 3:05:27 PM io.grpc.internal.ManagedChannelImplBuilder <clinit>
+FINE: Unable to apply census stats
+java.lang.ClassNotFoundException: io.grpc.census.InternalCensusStatsAccessor
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at io.grpc.internal.ManagedChannelImplBuilder.<clinit>(ManagedChannelImplBuilder.java:131)
+	at io.grpc.netty.shaded.io.grpc.netty.NettyChannelBuilder.<init>(NettyChannelBuilder.java:210)
+	at io.grpc.netty.shaded.io.grpc.netty.NettyChannelProvider.newChannelBuilder(NettyChannelProvider.java:54)
+	at io.grpc.ManagedChannelRegistry.newChannelBuilder(ManagedChannelRegistry.java:195)
+	at io.grpc.ManagedChannelRegistry.newChannelBuilder(ManagedChannelRegistry.java:155)
+	at io.grpc.Grpc.newChannelBuilder(Grpc.java:101)
+	at dispatcher.Dispatcher.main(Dispatcher.java:62)
+
+Oct 26, 2025 3:05:27 PM io.grpc.internal.ManagedChannelImplBuilder getEffectiveInterceptors
+FINE: Unable to apply census stats
+java.lang.ClassNotFoundException: io.grpc.census.InternalCensusTracingAccessor
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at io.grpc.internal.ManagedChannelImplBuilder.getEffectiveInterceptors(ManagedChannelImplBuilder.java:786)
+	at io.grpc.internal.ManagedChannelImplBuilder.build(ManagedChannelImplBuilder.java:731)
+	at io.grpc.ForwardingChannelBuilder2.build(ForwardingChannelBuilder2.java:278)
+	at dispatcher.Dispatcher.main(Dispatcher.java:62)
+
+Oct 26, 2025 3:05:28 PM io.grpc.ChannelLogger log
+FINEST: [Channel<1>: (localhost:32979)] Channel for 'localhost:32979' created
+Oct 26, 2025 3:05:28 PM io.grpc.LoadBalancerRegistry getHardCodedClasses
+FINE: Unable to find round-robin LoadBalancer
+java.lang.ClassNotFoundException: io.grpc.util.SecretRoundRobinLoadBalancerProvider$Provider
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at io.grpc.LoadBalancerRegistry.getHardCodedClasses(LoadBalancerRegistry.java:147)
+	at io.grpc.LoadBalancerRegistry.<clinit>(LoadBalancerRegistry.java:45)
+	at io.grpc.internal.AutoConfiguredLoadBalancerFactory.<init>(AutoConfiguredLoadBalancerFactory.java:49)
+	at io.grpc.internal.ManagedChannelImpl.<init>(ManagedChannelImpl.java:579)
+	at io.grpc.internal.ManagedChannelImplBuilder.build(ManagedChannelImplBuilder.java:731)
+	at io.grpc.ForwardingChannelBuilder2.build(ForwardingChannelBuilder2.java:278)
+	at dispatcher.Dispatcher.main(Dispatcher.java:62)
+
+Oct 26, 2025 3:05:28 PM io.grpc.LoadBalancerRegistry getDefaultRegistry
+FINE: Service loader found PickFirstLoadBalancerProvider{policy=pick_first, priority=5, available=true}
+Oct 26, 2025 3:05:28 PM dispatcher.Dispatcher main
+INFO: Dispatcher avviato - comunicazione lato server su porto: 32979
+Oct 26, 2025 3:05:28 PM dispatcher.Dispatcher main
+INFO: In atteesa di messagi. Premere Ctrl + C per terminare
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherMsgListener onMessage
+INFO: Listener in ascolto...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Thread avviato...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherMsgListener onMessage
+INFO: Listener in ascolto...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Messaggio ricevuto: deposita-63
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherMsgListener onMessage
+INFO: Listener in ascolto...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Thread avviato...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Thread avviato...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Messaggio ricevuto: deposita-95
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: JMSReplyTo: queue://response
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Messaggio ricevuto: deposita-35
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: JMSReplyTo: queue://response
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: JMSReplyTo: queue://response
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherMsgListener onMessage
+INFO: Listener in ascolto...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Ricevuta richiesta di deposito. Valore da depositare: 95
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Ricevuta richiesta di deposito. Valore da depositare: 63
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Ricevuta richiesta di deposito. Valore da depositare: 35
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherMsgListener onMessage
+INFO: Listener in ascolto...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Thread avviato...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Messaggio ricevuto: preleva
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: JMSReplyTo: queue://response
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Ricevuta richiesta prelievo
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherMsgListener onMessage
+INFO: Listener in ascolto...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherMsgListener onMessage
+INFO: Listener in ascolto...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Thread avviato...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Messaggio ricevuto: preleva
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: JMSReplyTo: queue://response
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherMsgListener onMessage
+INFO: Listener in ascolto...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Thread avviato...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Thread avviato...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Messaggio ricevuto: preleva
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: JMSReplyTo: queue://response
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Thread avviato...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherMsgListener onMessage
+INFO: Listener in ascolto...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Ricevuta richiesta prelievo
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherMsgListener onMessage
+INFO: Listener in ascolto...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Ricevuta richiesta prelievo
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Messaggio ricevuto: preleva
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Messaggio ricevuto: preleva
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: JMSReplyTo: queue://response
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: JMSReplyTo: queue://response
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Ricevuta richiesta prelievo
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Ricevuta richiesta prelievo
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Thread avviato...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Messaggio ricevuto: deposita-70
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: JMSReplyTo: queue://response
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Ricevuta richiesta di deposito. Valore da depositare: 70
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Thread avviato...
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Messaggio ricevuto: deposita-14
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: JMSReplyTo: queue://response
+Oct 26, 2025 3:05:36 PM dispatcher.DispatcherThread run
+INFO: Ricevuta richiesta di deposito. Valore da depositare: 14
+Oct 26, 2025 3:05:36 PM io.grpc.Context$LazyStorage <clinit>
+FINE: Storage override doesn't exist. Using default
+java.lang.ClassNotFoundException: io.grpc.override.ContextStorageOverride
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at io.grpc.Context$LazyStorage.createStorage(Context.java:129)
+	at io.grpc.Context$LazyStorage.<clinit>(Context.java:118)
+	at io.grpc.Context.storage(Context.java:106)
+	at io.grpc.Context.current(Context.java:172)
+	at io.grpc.internal.ManagedChannelImpl$RealChannel.newCall(ManagedChannelImpl.java:911)
+	at io.grpc.internal.ManagedChannelImpl.newCall(ManagedChannelImpl.java:824)
+	at io.grpc.internal.ForwardingManagedChannel.newCall(ForwardingManagedChannel.java:63)
+	at io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:159)
+	at dispatcher.MagazzinoGrpc$MagazzinoBlockingStub.preleva(MagazzinoGrpc.java:259)
+	at dispatcher.DispatcherThread.run(DispatcherThread.java:45)
+
+Oct 26, 2025 3:05:36 PM io.grpc.ChannelLogger log
+FINER: [Channel<1>: (localhost:32979)] Exiting idle mode
+Oct 26, 2025 3:05:36 PM io.grpc.internal.DnsNameResolver$Resolve run
+FINER: Attempting DNS resolution of localhost
+Oct 26, 2025 3:05:36 PM io.grpc.ChannelLogger log
+FINEST: [Channel<1>: (localhost:32979)] Resolved address: [[[localhost/127.0.0.1:32979]/{}], [[localhost/0:0:0:0:0:0:0:1:32979]/{}]], config={}
+Oct 26, 2025 3:05:36 PM io.grpc.ChannelLogger log
+FINER: [Channel<1>: (localhost:32979)] Address resolved: [[[localhost/127.0.0.1:32979]/{}], [[localhost/0:0:0:0:0:0:0:1:32979]/{}]]
+Oct 26, 2025 3:05:36 PM io.grpc.ChannelLogger log
+FINEST: [Subchannel<3>: (localhost:32979)] Subchannel for [[[localhost/127.0.0.1:32979]/{}], [[localhost/0:0:0:0:0:0:0:1:32979]/{}]] created
+Oct 26, 2025 3:05:36 PM io.grpc.ChannelLogger log
+FINEST: [Channel<1>: (localhost:32979)] Child Subchannel started
+Oct 26, 2025 3:05:36 PM io.grpc.ChannelLogger log
+FINER: [Channel<1>: (localhost:32979)] Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=Subchannel<3>: (localhost:32979), streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false, authority-override=null}}
+Oct 26, 2025 3:05:36 PM io.grpc.ChannelLogger log
+FINER: [Subchannel<3>: (localhost:32979)] CONNECTING as requested
+Oct 26, 2025 3:05:36 PM io.grpc.ChannelLogger log
+FINER: [Channel<1>: (localhost:32979)] Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false, authority-override=null}}
+Oct 26, 2025 3:05:36 PM io.grpc.netty.shaded.io.grpc.netty.Utils getByteBufAllocator
+FINE: Using custom allocator: forceHeapBuffer=false, defaultPreferDirect=true
+Oct 26, 2025 3:05:36 PM io.grpc.netty.shaded.io.grpc.netty.Utils createByteBufAllocator
+FINE: Creating allocator, preferDirect=true
+Oct 26, 2025 3:05:36 PM io.grpc.netty.shaded.io.grpc.netty.Utils createByteBufAllocator
+FINE: Forcing maxOrder=8
+Oct 26, 2025 3:05:36 PM io.grpc.ChannelLogger log
+FINEST: [NettyClientTransport<4>: (localhost/127.0.0.1:32979)] WaitUntilActive started
+Oct 26, 2025 3:05:36 PM io.grpc.ChannelLogger log
+FINER: [Subchannel<3>: (localhost:32979)] Started transport NettyClientTransport<4>: (localhost/127.0.0.1:32979)
+Oct 26, 2025 3:05:36 PM io.grpc.ChannelLogger log
+FINER: [NettyClientTransport<4>: (localhost/127.0.0.1:32979)] WaitUntilActive completed
+Oct 26, 2025 3:05:36 PM io.grpc.ChannelLogger log
+FINEST: [NettyClientTransport<4>: (localhost/127.0.0.1:32979)] Plaintext started
+Oct 26, 2025 3:05:36 PM io.grpc.ChannelLogger log
+FINER: [NettyClientTransport<4>: (localhost/127.0.0.1:32979)] Plaintext completed
+Oct 26, 2025 3:05:36 PM io.grpc.ChannelLogger log
+FINER: [Subchannel<3>: (localhost:32979)] READY
+Oct 26, 2025 3:05:36 PM io.grpc.ChannelLogger log
+FINER: [Channel<1>: (localhost:32979)] Entering READY state with picker: Picker{result=PickResult{subchannel=Subchannel<3>: (localhost:32979), streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false, authority-override=null}}
+Oct 26, 2025 3:05:36 PM io.grpc.netty.shaded.io.grpc.netty.NettyClientHandler$FrameListener onPingAckRead
+FINE: Window: 1,048,576
+Oct 26, 2025 3:35:36 PM io.grpc.ChannelLogger log
+FINER: [Channel<1>: (localhost:32979)] Entering IDLE state
+Oct 26, 2025 3:35:41 PM io.grpc.ChannelLogger log
+FINER: [Subchannel<3>: (localhost:32979)] NettyClientTransport<4>: (localhost/127.0.0.1:32979) SHUTDOWN with UNAVAILABLE(Subchannel shutdown invoked)
+Oct 26, 2025 3:35:41 PM io.grpc.netty.shaded.io.grpc.netty.NettyClientHandler close
+FINE: Network channel being closed by the application.
+Oct 26, 2025 3:35:41 PM io.grpc.netty.shaded.io.grpc.netty.NettyClientHandler channelInactive
+FINE: Network channel is closed
+Oct 26, 2025 3:35:41 PM io.grpc.ChannelLogger log
+FINER: [Subchannel<3>: (localhost:32979)] NettyClientTransport<4>: (localhost/127.0.0.1:32979) Terminated
+Oct 26, 2025 3:35:41 PM io.grpc.ChannelLogger log
+FINER: [Subchannel<3>: (localhost:32979)] Terminated
+Oct 26, 2025 3:57:32 PM dispatcher.Dispatcher lambda$0
+INFO: Shutdown in corso...

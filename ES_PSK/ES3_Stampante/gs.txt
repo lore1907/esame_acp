@@ -1,0 +1,7 @@
+Stampa del file: /user/file_53.doc 	 gs
+Stampa del file: /user/file_55.doc 	 gs
+Stampa del file: /user/file_23.doc 	 gs
+Stampa del file: /user/file_76.doc 	 gs
+Stampa del file: /user/file_19.doc 	 gs
+Stampa del file: /user/file_58.txt 	 gs
+Stampa del file: /user/file_99.doc 	 gs

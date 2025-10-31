@@ -1,0 +1,13 @@
+Stampa del file: /user/file_50.doc 	 color
+Stampa del file: /user/file_96.txt 	 color
+Stampa del file: /user/file_42.doc 	 color
+Stampa del file: /user/file_47.doc 	 color
+Stampa del file: /user/file_82.txt 	 color
+Stampa del file: /user/file_6.doc 	 color
+Stampa del file: /user/file_69.doc 	 color
+Stampa del file: /user/file_68.txt 	 color
+Stampa del file: /user/file_34.txt 	 color
+Stampa del file: /user/file_33.doc 	 color
+Stampa del file: /user/file_54.txt 	 color
+Stampa del file: /user/file_90.doc 	 color
+Stampa del file: /user/file_44.txt 	 color

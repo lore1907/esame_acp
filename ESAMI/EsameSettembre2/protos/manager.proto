@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package generated;
+
+option java_multiple_files = true;
+
+
+service Manager {
+
+    rpc Deploy(DeployRequest) returns (Empty) {}
+    rpc StopAll(StopRequest) returns (Empty) {}
+} 
+
+
+
+message DeployRequest {
+    int64 id = 1;
+    string name = 2;
+    string task_type = 3;
+}
+
+
+message StopRequest {
+    string task_type = 1;
+}
+
+message Empty {
+
+}
