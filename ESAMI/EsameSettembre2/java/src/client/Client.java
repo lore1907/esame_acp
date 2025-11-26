@@ -43,12 +43,8 @@ public class Client extends Thread{
 
         for (int i=0; i<4; i++){
             long id = random.nextInt(1000);
-            String taskType; 
-            if (random.nextBoolean()) {
-                taskType = "gpu-bound";
-            } else {
-                taskType = "real-time";
-            }
+
+            String taskType = random.nextBoolean() ? "gpu-bound" : "real-time";
 
             String name;
             if (taskType.equals("gpu-bound")){ 
@@ -64,7 +60,10 @@ public class Client extends Thread{
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
+
         }
+        String taskType = random.nextBoolean() ? "gpu-bound" : "real-time";
+        stopAll(taskType);
     }
 
 
@@ -83,11 +82,10 @@ public class Client extends Thread{
             
             Client[] threads = new Client[5];
 
-
             for (int i=0; i<5; i++){
 
                 threads[i] = new Client(channel);
-                threads[i].start()
+                threads[i].start();
             }
             
             for (int i=0; i<5; i++){
@@ -95,9 +93,6 @@ public class Client extends Thread{
                 threads[i].join();
             }
 
-            Client stopClient = new Client(channel);
-            stopClient.stopAll("gpu-bound");
-            stopClient.stopAll("real-time");
 
         } finally {
             channel.shutdownNow().awaitTermination(5, TimeUnit.SECONDS);

@@ -37,7 +37,7 @@ public class ClusterManagerThread extends Thread{
         prop.put("topic.rt", "rt");
 
         try {
-            Context jndiContext = new InitialContext();
+            Context jndiContext = new InitialContext(prop);
             TopicConnectionFactory tcf = (TopicConnectionFactory) jndiContext.lookup("TopicConnectionFactory");
 
             String topicName;
@@ -52,7 +52,7 @@ public class ClusterManagerThread extends Thread{
                 }
                 messageText = "deploy-" + dreq.getId() +  "-" + dreq.getName();
             } else if (sreq != null) {
-                String taskType = dreq.getTaskType(); 
+                String taskType = sreq.getTaskType(); 
                 if ("real-time".equals(taskType)) {
                     topicName = "rt";
                 } else {

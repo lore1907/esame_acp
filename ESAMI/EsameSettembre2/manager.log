@@ -1,0 +1,189 @@
+Nov 25, 2025 5:14:14 PM io.grpc.ServerRegistry getHardCodedClasses
+FINE: Unable to find OkHttpServerProvider
+java.lang.ClassNotFoundException: io.grpc.okhttp.OkHttpServerProvider
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at io.grpc.ServerRegistry.getHardCodedClasses(ServerRegistry.java:130)
+	at io.grpc.ServerRegistry.getDefaultRegistry(ServerRegistry.java:96)
+	at io.grpc.Grpc.newServerBuilderForPort(Grpc.java:133)
+	at manager.ClusterManager.start(ClusterManager.java:22)
+	at manager.ClusterManager.main(ClusterManager.java:56)
+
+Nov 25, 2025 5:14:14 PM io.grpc.ServerRegistry getDefaultRegistry
+FINE: Service loader found io.grpc.netty.shaded.io.grpc.netty.NettyServerProvider@37a71e93
+Nov 25, 2025 5:14:16 PM io.grpc.internal.ServerImplBuilder getTracerFactories
+FINE: Unable to apply census stats
+java.lang.ClassNotFoundException: io.grpc.census.InternalCensusStatsAccessor
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at io.grpc.internal.ServerImplBuilder.getTracerFactories(ServerImplBuilder.java:260)
+	at io.grpc.internal.ServerImplBuilder.build(ServerImplBuilder.java:245)
+	at io.grpc.ForwardingServerBuilder.build(ForwardingServerBuilder.java:201)
+	at manager.ClusterManager.start(ClusterManager.java:25)
+	at manager.ClusterManager.main(ClusterManager.java:56)
+
+Nov 25, 2025 5:14:16 PM io.grpc.internal.ServerImplBuilder getTracerFactories
+FINE: Unable to apply census stats
+java.lang.ClassNotFoundException: io.grpc.census.InternalCensusTracingAccessor
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at io.grpc.internal.ServerImplBuilder.getTracerFactories(ServerImplBuilder.java:292)
+	at io.grpc.internal.ServerImplBuilder.build(ServerImplBuilder.java:245)
+	at io.grpc.ForwardingServerBuilder.build(ForwardingServerBuilder.java:201)
+	at manager.ClusterManager.start(ClusterManager.java:25)
+	at manager.ClusterManager.main(ClusterManager.java:56)
+
+Nov 25, 2025 5:14:16 PM io.grpc.netty.shaded.io.grpc.netty.Utils getByteBufAllocator
+FINE: Using custom allocator: forceHeapBuffer=false, defaultPreferDirect=true
+Nov 25, 2025 5:14:16 PM io.grpc.netty.shaded.io.grpc.netty.Utils createByteBufAllocator
+FINE: Creating allocator, preferDirect=true
+Nov 25, 2025 5:14:16 PM io.grpc.netty.shaded.io.grpc.netty.Utils createByteBufAllocator
+FINE: Forcing maxOrder=8
+Nov 25, 2025 5:14:16 PM io.grpc.netty.shaded.io.grpc.netty.Utils getByteBufAllocator
+FINE: Using custom allocator: forceHeapBuffer=false, defaultPreferDirect=true
+Nov 25, 2025 5:14:16 PM manager.ClusterManager start
+INFO: Server started, listening on 45287
+Nov 25, 2025 5:14:44 PM io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler$ServerChannelLogger log
+FINEST: WaitUntilActive started
+Nov 25, 2025 5:14:44 PM io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler$ServerChannelLogger log
+FINEST: WaitUntilActive completed
+Nov 25, 2025 5:14:44 PM io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler$ServerChannelLogger log
+FINEST: Plaintext started
+Nov 25, 2025 5:14:44 PM io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler$ServerChannelLogger log
+FINEST: Plaintext completed
+Nov 25, 2025 5:14:44 PM io.grpc.Context$LazyStorage <clinit>
+FINE: Storage override doesn't exist. Using default
+java.lang.ClassNotFoundException: io.grpc.override.ContextStorageOverride
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at io.grpc.Context$LazyStorage.createStorage(Context.java:129)
+	at io.grpc.Context$LazyStorage.<clinit>(Context.java:118)
+	at io.grpc.Context.storage(Context.java:106)
+	at io.grpc.Context.attach(Context.java:427)
+	at io.grpc.Context$CancellableContext.attach(Context.java:714)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:35)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+Nov 25, 2025 5:14:44 PM io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler$FrameListener onPingAckRead
+FINE: Window: 1,048,576
+Nov 25, 2025 5:14:44 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=344, Tipo=real-time
+Nov 25, 2025 5:14:44 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=666, Tipo=real-time
+Nov 25, 2025 5:14:44 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=20, Tipo=gpu-bound
+Nov 25, 2025 5:14:44 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=20, Tipo=gpu-bound
+Nov 25, 2025 5:14:44 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=593, Tipo=real-time
+Nov 25, 2025 5:14:45 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:45 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:45 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:45 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:45 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:46 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=496, Tipo=real-time
+Nov 25, 2025 5:14:46 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=988, Tipo=real-time
+Nov 25, 2025 5:14:46 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=638, Tipo=real-time
+Nov 25, 2025 5:14:46 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=255, Tipo=real-time
+Nov 25, 2025 5:14:46 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=938, Tipo=real-time
+Nov 25, 2025 5:14:46 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:46 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:46 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:46 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:46 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:47 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=353, Tipo=real-time
+Nov 25, 2025 5:14:47 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=404, Tipo=real-time
+Nov 25, 2025 5:14:47 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=75, Tipo=real-time
+Nov 25, 2025 5:14:47 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=254, Tipo=gpu-bound
+Nov 25, 2025 5:14:47 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=32, Tipo=gpu-bound
+Nov 25, 2025 5:14:47 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:47 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:47 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:47 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:47 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:48 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=843, Tipo=gpu-bound
+Nov 25, 2025 5:14:48 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=385, Tipo=gpu-bound
+Nov 25, 2025 5:14:48 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:48 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=607, Tipo=real-time
+Nov 25, 2025 5:14:48 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=696, Tipo=gpu-bound
+Nov 25, 2025 5:14:48 PM manager.ManagerImpl deploy
+INFO: Ricevuta richiesta DEPLOY per task: ID=982, Tipo=real-time
+Nov 25, 2025 5:14:48 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:48 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:48 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:48 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:49 PM manager.ManagerImpl stopAll
+INFO: Ricevuta richiesta STOP_ALL per task di tipo:gpu-bound
+Nov 25, 2025 5:14:49 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:49 PM manager.ManagerImpl stopAll
+INFO: Ricevuta richiesta STOP_ALL per task di tipo:gpu-bound
+Nov 25, 2025 5:14:49 PM manager.ManagerImpl stopAll
+INFO: Ricevuta richiesta STOP_ALL per task di tipo:real-time
+Nov 25, 2025 5:14:49 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:49 PM manager.ManagerImpl stopAll
+INFO: Ricevuta richiesta STOP_ALL per task di tipo:gpu-bound
+Nov 25, 2025 5:14:49 PM manager.ManagerImpl stopAll
+INFO: Ricevuta richiesta STOP_ALL per task di tipo:gpu-bound
+Nov 25, 2025 5:14:49 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:49 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:14:49 PM manager.ClusterManagerThread run
+INFO: Messaggio inviato
+Nov 25, 2025 5:49:41 PM manager.ClusterManager lambda$0
+WARNING: Shutting down gRPC server since JVM is shutting down

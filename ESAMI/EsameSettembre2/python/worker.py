@@ -1,6 +1,6 @@
 import stomp, logging
 from multiprocess import Process, Queue
-
+import time
 
 
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -15,12 +15,20 @@ class MyListener(stomp.ConnectionListener):
         message = (frame.body or "").strip()
         logging.info(f"Ricevuto messaggio: ' {message} per il topic ' {self.topic} '")
 
-        parts = message.split("-")
+        parts = message.split("-", 2)
+        if not parts: 
+            logging.warning(f"[{self.topic}] Messaggio vuoto/non valido")
+
         req_type = parts[0].lower()
 
         if req_type == "deploy": 
-            _id = parts[1]
-            name = parts[0]
+
+            if len(parts) != 3: 
+                logging.warning(f"[{self.topic}] Formato deploy errato (id o nome mancante)") 
+                return
+
+            _id = int(parts[1])
+            name = parts[2]
             task = {"id": _id, "name": name}
 
             try: 
@@ -32,9 +40,12 @@ class MyListener(stomp.ConnectionListener):
         elif req_type == "stop_all":
             removed = 0
             while not self.queue.empty(): 
-                elem = self.queue.get()
-                removed += 1 
-                logging.info(f"[{self.topic}] Rimosso elem: {elem}, \t\t n {removed}")
+                try:
+                    elem = self.queue.get_nowait()
+                    removed += 1 
+                    logging.info(f"[{self.topic}] Rimosso elem: {elem}, \t\t n {removed}")
+                except Exception: 
+                    break
 
     def on_error(self, frame): 
         logging.error(f"Errore nella ricezione del messaggio: {frame.body}")
@@ -43,7 +54,7 @@ class MyListener(stomp.ConnectionListener):
 class WorkerProcess(Process):
 
     def __init__ (self, topic, queue, ip, port): 
-        super().__init__
+        super().__init__()
         self.topic = topic
         self.queue = queue
         self.ip = ip
@@ -79,14 +90,16 @@ class Worker:
         port = 61613
         p = WorkerProcess(topic, self.queue[topic], ip, port)
         p.start()
-    
+        return p
 
 if __name__ == "__main__": 
 
     topics = ["gpu", "rt"]
-    
+    worker_manager = Worker()
     p = []
     for topic in topics: 
-        worker = Worker()
-        worker.start(topic)
-        p.append()
+        proc = worker_manager.start(topic)
+        p.append(proc)
+
+    for proc in p: 
+        proc.join()
