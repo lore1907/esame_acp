@@ -1,0 +1,18 @@
+syntax = "proto3"; 
+
+service Manager{
+    rpc sell(Product) returns (StringMessage);
+    rpc buy(Empty) returns (Product);
+}
+
+message StringMessage{
+    string value = 1;
+}
+
+message Product{ 
+    int64 id=1;
+}
+
+message Empty{
+
+}

@@ -11,7 +11,16 @@ public class TemperatureClient {
         ClientThread threads[] = new ClientThread[NUM_THREADS]; 
 
         for(int i=0; i<NUM_THREADS; i++){
-            threads[i] = ClientThread(ip_address, port);
+            threads[i] = new ClientThread(ip_address, port);
+            threads[i].start();
+        }
+
+        for (int i=0; i<NUM_THREADS; i++){
+            try {
+                threads[i].join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
     
