@@ -1,6 +1,5 @@
 package manager;
 import javax.jms.*;
-import javax.naming.*;
 import java.io.*;
 
 public class ManagerListener implements MessageListener{
