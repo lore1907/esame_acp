@@ -2,6 +2,9 @@ import stomp, sys
 import multiprocess as mp
 import time
 
+## due code 1 per topic, ricezione asincrona sulla coda, alla ricezione leggo messaggio e verifico operazione
+## deploy inserisce il mess in coda, stop svuota la coda relativa al proprio topoic e entrambi stampano a video
+
 class myListener(stomp.ConnectionListener):
 
     def __init__(self, queue, topic):
@@ -17,7 +20,7 @@ class myListener(stomp.ConnectionListener):
 
         if msg == "stopAll":
             print(f"[{self.topic}] STOP RICEVUTO. Svuoto coda...")
-            while not self.queue.empty():
+            while not self.queue.empty():      
                 try:
                     rimosso = self.queue.get_nowait()
                     print(f"[{self.topic}] Rimosso: {rimosso}")
@@ -49,6 +52,7 @@ class Worker(mp.Process):
             conn.subscribe(destination=destination, id=f"sub {self.topic}", ack='auto')
             print(f"[WORKER {self.topic}] Connesso e in attesa su {destination}....")
 
+            #bisogna mantenere attivo per ricevere tutti i messaggi
             while not self.stop_event.is_set():
                 time.sleep(1)
 
@@ -78,6 +82,7 @@ if __name__ == "__main__":
     except KeyboardInterrupt :
         print("Richiesta chiusura da tastiera...")
         stop_event.set()
+        ## se facessi fuori il join dato che ho il while true nei processi bloccherei tutto quiindi li aspetto solo quando si e verificato l evento
         for worker in workers:
             worker.join()
         

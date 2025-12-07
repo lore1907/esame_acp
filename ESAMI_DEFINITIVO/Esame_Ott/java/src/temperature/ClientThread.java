@@ -3,7 +3,6 @@ package temperature;
 import java.util.Random;
 
 
-
 public class ClientThread extends Thread{
    
     private final TemperatureProxy proxy;

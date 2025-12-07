@@ -1,7 +1,6 @@
 package manager;
 
 import java.io.IOException;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -23,7 +22,9 @@ public class Manager {
     private Queue gpu;
     private Queue rt;
 
-
+    // aggiunto costruttore per passare ai metodi la connection e le code cosi che le passa al thread 
+    // che puo creare sessione e sender alle varie code
+    
     public Manager(QueueConnection qc, Queue qgpu, Queue qrt){
         qconn = qc;
         gpu = qgpu;
@@ -38,9 +39,8 @@ public class Manager {
                                                 .addService(new ManagerImpl())
                                                 .build()
                                                 .start();
-        System.out.println("Server started, listening on: " + server.getPort());   
 
-        
+        System.out.println("Server started, listening on: " + server.getPort());   
 
         
         Runtime.getRuntime().addShutdownHook(new Thread( () -> {
@@ -67,7 +67,7 @@ public class Manager {
             responsObserver.onNext(empty);
             responsObserver.onCompleted();
 
-            String message = "deploy" + "_" + req.getId() + "_" + req.getTipo();
+            String message = "deploy" + "_" + req.getId() + "_" + req.getName();
             ManagerThread t = new ManagerThread(qconn, gpu, rt, req, message); 
             t.start(); 
 

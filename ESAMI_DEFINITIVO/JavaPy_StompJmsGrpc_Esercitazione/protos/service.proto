@@ -1,0 +1,20 @@
+syntax = "proto3";
+package generated;
+option java_multiple_files = true; 
+
+
+service Service{
+
+    rpc Preleva(Empty) returns (Product) {}
+    rpc Deposita(Product) returns (Empty) {}
+}
+
+
+message Product{
+
+    int64 id_articolo = 1;
+}
+
+message Empty{
+
+}

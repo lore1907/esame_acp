@@ -15,6 +15,7 @@ public class Client {
         blockingStub = ManagerGrpc.newBlockingStub(ch);
     }
     
+    //aggiunto un getter perche essendo statico e l'unico modo di accedere nel main e passarlo al clientThread
     public ManagerGrpc.ManagerBlockingStub getStub(){
         return blockingStub;
     }
@@ -41,6 +42,7 @@ public class Client {
                 threads[i].start();
             }
 
+            //for each
             for (ClientThread t: threads) t.join();
 
         } catch (Exception e) {

@@ -8,7 +8,6 @@ public abstract class CodaWrapper implements Coda{
         coda = c;
     }
 
-
     public boolean empty(){
         return coda.empty();
     }
@@ -21,3 +20,4 @@ public abstract class CodaWrapper implements Coda{
         return coda.full();
     }
 }
+
