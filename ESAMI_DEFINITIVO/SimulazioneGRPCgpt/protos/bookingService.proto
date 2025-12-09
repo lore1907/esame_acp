@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package generated;
+
+option java_multiple_files = true;
+
+service BookingManager{
+
+    rpc GetTotalReservations(Empty) returns (StatsResponse);
+    rpc GetLastReservation(Empty) returns (Reservation);
+}
+
+message Empty{
+
+}
+
+message Reservation{
+    string user = 1;
+    int32 people = 2;
+    string timeSlot =  3;
+}
+
+message StatsResponse{
+    int32 total = 1;
+}
